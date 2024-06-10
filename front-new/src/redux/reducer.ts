@@ -5,7 +5,7 @@ import articleReducer from "@/app/component/articles/service/article.slice";
 import userReducer from "@/app/component/users/service/user.slice";
 import boardReducer from "@/app/component/boards/service/board.slice";
 import adminReducer from "@/app/component/admins/service/admin.slice";
-
+import transactionReducer from "@/app/component/transactions/service/transaction.slice";
 
 const createNoopStorage = () => {
   return {
@@ -49,14 +49,22 @@ const adminPersistConfig = {
   whitelist: ["adminState"],
 };
 
+const transactionPersistConfig = {
+  key: "transaction",
+  storage,
+  whitelist: ["transactionState"],
+};
+
 const persistedArticleReducer = persistReducer(articlePersistConfig, articleReducer);
 const persistedUserReducer = persistReducer(userPersistConfig, userReducer);
 const persistedBoardReducer = persistReducer(boardPersistConfig, boardReducer);
 const persistedAdminReducer = persistReducer(adminPersistConfig, adminReducer);
+const persistedTransactionReducer = persistReducer(transactionPersistConfig, transactionReducer);
 
 export const rootReducer = combineReducers({
   article: persistedArticleReducer,
   user: persistedUserReducer,
   board: persistedBoardReducer,
   admin: persistedAdminReducer,
+  transaction: persistedTransactionReducer,
 });

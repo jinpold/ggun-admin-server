@@ -21,7 +21,8 @@ export const linkButtonTitles = [
     {id: 2, title: '회원가입', path: `${PG.USER}/join` },
     {id: 3, title: '회원 정보변경', path: `${PG.USER}/detail/${token ? jwtDecode<any>(token).id : 0}` },
     {id: 4, title: '사용자 관리', path: `${PG.USER}/list`},
-    {id: 4, title: '임직원 관리', path: `${PG.ADMIN}/list`}
+    {id: 5, title: '임직원 관리', path: `${PG.ADMIN}/list`},
+    {id: 6, title: '거래 실적', path: `${PG.TRANSACTION}/list`}
 ];
 
 const theme = createTheme({

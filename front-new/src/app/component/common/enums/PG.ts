@@ -5,5 +5,6 @@ export const enum PG {
     ARTICLE = '/pages/articles',
     SE = '/pages/jusik/SE',
     DEMO = "DEMO",
+    TRANSACTION = '/pages/transactions',
     
 }

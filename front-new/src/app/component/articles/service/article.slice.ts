@@ -44,8 +44,7 @@ export const articleSlice = createSlice({
 
         builder                                      
         .addCase(findAllArticles.fulfilled, (state:any, {payload}:any)=>{state.array = payload})
-        .addCase(findArticleById.fulfilled, (state:any, {payload}:any)=>{state.json = payload})   
-                                                   
+        .addCase(findArticleById.fulfilled, (state:any, {payload}:any)=>{state.json = payload})                            
         .addCase(findDeleteById.fulfilled, (state:any, {payload}:any)=>{state.json = payload}) 
         .addCase(findCount.fulfilled, (state:any, {payload}:any)=>{state.count = payload})
         .addCase(findModify.fulfilled, (state:any, {payload}:any) => {state.array = payload})
