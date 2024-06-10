@@ -1,0 +1,91 @@
+package com.james.api.admin.controller;
+import com.james.api.common.component.Messenger;
+import com.james.api.admin.model.Admin;
+import com.james.api.admin.model.AdminDto;
+import com.james.api.admin.repository.AdminRepository;
+import com.james.api.admin.service.AdminService;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.sql.SQLException;
+import java.util.*;
+
+
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RestController("adminController")
+@RequiredArgsConstructor
+@ApiResponses(value = {
+        @ApiResponse(responseCode = "400", description = "Invalid ID supplied"),
+        @ApiResponse(responseCode = "404", description = "Customer not found")})
+@RequestMapping(path = "/api/admins")
+@Slf4j
+public class AdminController {
+    private final AdminService service;
+    private final AdminRepository adminRepository;
+
+    // ---------------------------------Command---------------------------------------
+    @SuppressWarnings("static-access")
+    @PostMapping( "/save")
+    public ResponseEntity<Messenger> save(@RequestBody AdminDto dto) {
+        log.info("입력받은 정보 : {}", dto );
+        return ResponseEntity.ok(service.save(dto));
+
+    }
+    @PutMapping ("/modify")
+    public ResponseEntity<Messenger> modify(@RequestBody AdminDto dto) {
+        log.info("입력받은 정보 : {}", dto );
+        return ResponseEntity.ok(service.modify(dto));
+    }
+    // -----------------------------------Query ---------------------------------------
+
+    @GetMapping("/list")
+    public ResponseEntity<List<AdminDto>> findAll() throws SQLException {
+        log.info("입력받은 정보 : {}");
+        System.out.println(service.findAll());
+        return ResponseEntity.ok(service.findAll());
+    }
+    @GetMapping("/detail")
+    public ResponseEntity<AdminDto> findById(@RequestParam("id") Long id) {
+        log.info("입력받은 정보 : {}", id );
+        return ResponseEntity.ok(service.findById(id).orElseGet(AdminDto::new));
+    }
+    @DeleteMapping("/delete")
+    public ResponseEntity<Messenger> deleteById(@RequestParam("id") Long id) {
+        log.info("입력받은 정보 : {}", id );
+        return ResponseEntity.ok(service.deleteById(id));
+    }
+    @GetMapping("/exists-id")
+    public ResponseEntity<AdminDto> existsById(@RequestParam("id") Long id){
+        service.existsById(0L);
+        return ResponseEntity.ok(service.findById(id).orElseGet(AdminDto::new));
+    }
+    @GetMapping("/count")
+    public ResponseEntity<Long> count()  {
+        return ResponseEntity.ok(service.count());
+    }
+    @PostMapping("/search-name")
+    public ResponseEntity<Optional<Admin>> findUsersByName(@RequestBody AdminDto param) {
+        //log.info("입력받은 정보 : {}", name );
+        return ResponseEntity.ok(service.findUserByUsername(param.getEnpName()));
+    }
+    @GetMapping("/search-job")
+    public ResponseEntity<Messenger> findUsersByRole(@RequestParam("Role") String role) {
+        service.findUsersByRole(role);
+        return ResponseEntity.ok(new Messenger());
+    }
+
+    @GetMapping("/logout")
+    public ResponseEntity<Boolean> logout(@RequestHeader("Authorization") String accessToken){
+        log.info("logout request : {}", accessToken);
+        var flag = service.logout(accessToken); // 토큰이 없으면 false 있으면 true
+        return ResponseEntity.ok(flag);
+    }
+    @GetMapping("/search")
+    public ResponseEntity<Optional<AdminDto>> findUserInfo(@RequestHeader("Authorization") String accessToken) {
+        log.info("입력받은 정보 : {}", accessToken );
+        return ResponseEntity.ok(service.findUserInfo(accessToken));
+    }
+}
