@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -43,5 +44,10 @@ public class TransactionController {
     @GetMapping("/count")
     public ResponseEntity<Long> count()  {
         return ResponseEntity.ok(service.count());
+    }
+
+    @GetMapping("/netProfitByDate")
+    public ResponseEntity<Map<String, Double>> getNetProfitByDate() {
+        return ResponseEntity.ok(service.getNetProfitByDate());
     }
 }

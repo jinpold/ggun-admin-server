@@ -4,8 +4,12 @@ import com.james.api.common.service.QueryService;
 import com.james.api.transaction.model.Transaction;
 import com.james.api.transaction.model.TransactionDto;
 
+import java.util.Map;
+
 
 public interface TransactionService extends CommandService<TransactionDto>, QueryService<TransactionDto> {
+
+    Map<String, Double> getNetProfitByDate();
 
     default Transaction dtoToEntity(TransactionDto dto){
         return Transaction.builder()

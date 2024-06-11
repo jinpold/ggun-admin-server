@@ -1,6 +1,6 @@
 package com.james.api.common.config;
 import com.james.api.common.component.interceptor.AuthInterceptor;
-import com.james.api.user.repository.UserRepository;
+import com.james.api.common.component.interceptor.UserInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvConfig implements WebMvcConfigurer {
 
     private final AuthInterceptor authInterceptor;
-//    private final UserInterceptor userInterceptor;
+    private final UserInterceptor userInterceptor;
 
     @Override
     public void addInterceptors(@SuppressWarnings("null") InterceptorRegistry registry) {
@@ -19,10 +19,10 @@ public class WebMvConfig implements WebMvcConfigurer {
 //                .addPathPatterns("/api/**")
                 .excludePathPatterns("/api/UserAuth/**", "/api/auth/**", "/api/news/**", "/api/articles/**", "/api/boards/**","/api/users/**","/api/admins/**","/api/transactions/**");
 
-//        registry.addInterceptor(userInterceptor)
+        registry.addInterceptor(userInterceptor)
 //                .addPathPatterns("/api/**")
-//                .excludePathPatterns("/api/UserAuth/**", "/api/auth/**", "/api/news/**", "/api/articles/**", "/api/boards/**");
-//
+                .excludePathPatterns("/api/UserAuth/**", "/api/auth/**", "/api/news/**", "/api/articles/**", "/api/boards/**","/api/users/**","/api/admins/**","/api/transactions/**");
+
     }
 
 }

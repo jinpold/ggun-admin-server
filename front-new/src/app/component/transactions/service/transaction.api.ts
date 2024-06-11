@@ -28,18 +28,17 @@ export const findAlltransactionsAPI = async (page: number) =>{
 
 
 
-// export const findTransactionByIdAPI = async (id: number) =>{ 
-//     try{                                                       
-//         const response = await instance().get('/transactions/detail',{
-//             params: {id}
-//         })
-//         return response.data
-//     }catch(error){
-//         console.log(error)
-//         return error
-//     }
-// }
-
+export const findNetProfitByDateAPI = async () =>{ 
+    try{                                                       
+        const response = await instance().get('/transactions/netProfitByDate',{
+            params: {}
+        })
+        return response.data
+    }catch(error){
+        console.log(error)
+        return error
+    }
+}
 
 export const findCountAPI = async () =>{    
     try{                                                        

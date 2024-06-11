@@ -4,203 +4,203 @@
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES (1, '제갈수', '삼성전자', '15', '1017000', '0', '0', '0', '2024-05-27', '67800', '15255', '15255', '0', '0', '0', '15255', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES (2, '제갈수', '0', '0', '0 ', 'SK하이닉스', '8', '900000', '2024-05-27', '112500', '13500', '0', '13500', '0', '180000', '0', '193500', '0.015', '0.2');
+VALUES (2, '제갈수', '0', '0', '0 ', 'SK하이닉스', '8', '900000', '2024-05-28', '112500', '13500', '0', '13500', '0', '180000', '0', '193500', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES (3, '제갈수', 'DB하이텍', '20', '880000', '0', '0', '0', '2024-05-27', '44000', '13200', '13200', '0', '0', '0', '13200', '0', '0.015', '0.2');
+VALUES (3, '제갈수', 'DB하이텍', '20', '880000', '0', '0', '0', '2024-05-29', '44000', '13200', '13200', '0', '0', '0', '13200', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES (4, '제갈수', '0', '0', '0', '네페스', '30', '1005000', '2024-05-27', '33500', '15075', '0', '15075', '0', '201000', '0', '216075', '0.015', '0.2');
+VALUES (4, '제갈수', '0', '0', '0', '네페스', '30', '1005000', '2024-05-30', '33500', '15075', '0', '15075', '0', '201000', '0', '216075', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(5, '제갈수', '후성', '60', '792000', '0', '0', '0', '2024-05-27', '13200', '11880', '11880', '0', '0', '0', '11880', '0', '0.015', '0.2');
+VALUES(5, '제갈수', '후성', '60', '792000', '0', '0', '0', '2024-05-31', '13200', '11880', '11880', '0', '0', '0', '11880', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(6, '제갈수', '0', '0', '0', 'LG전자', '5', '570000', '2024-05-27', '114000', '8550', '0', '8550', '0', '114000', '0', '122550', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(7, '제갈수', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-27', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
+VALUES(7, '제갈수', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-28', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(8, '제갈수', '0', '0', '0', 'SK 시그넷', '7', '539000', '2024-05-27', '77000', '8085', '0', '8085', '0', '107800', '0', '115885', '0.015', '0.2');
+VALUES(8, '제갈수', '0', '0', '0', 'SK 시그넷', '7', '539000', '2024-05-29', '77000', '8085', '0', '8085', '0', '107800', '0', '115885', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(9, '제갈수', '모트렉스', '20', '476000', '0', '0', '0', '2024-05-27', '23800', '7140', '7140', '0', '0', '0', '7140', '0', '0.015', '0.2');
+VALUES(9, '제갈수', '모트렉스', '20', '476000', '0', '0', '0', '2024-05-30', '23800', '7140', '7140', '0', '0', '0', '7140', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(10, '제갈수', '0', '0', '0', '원익피앤이', '25', '710000', '2024-05-27', '28400', '10650', '0', '10650', '0', '142000', '0', '152650', '0.015', '0.2');
+VALUES(10, '제갈수', '0', '0', '0', '원익피앤이', '25', '710000', '2024-05-31', '28400', '10650', '0', '10650', '0', '142000', '0', '152650', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(11, '김현주', '삼성전자', '5', '339000', '0', '0', '0', '2024-05-27', '67800', '5085', '5085', '0', '0', '0', '5085', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(12, '김현주', '0', '0', '0', 'SK하이닉스', '3', '337500', '2024-05-27', '112500', '5063', '0', '5062.5', '0', '67500', '0', '72562.5', '0.015', '0.2');
+VALUES(12, '김현주', '0', '0', '0', 'SK하이닉스', '3', '337500', '2024-05-28', '112500', '5063', '0', '5062.5', '0', '67500', '0', '72562.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(13, '김현주', 'DB하이텍', '15', '660000', '0', '0', '0', '2024-05-27', '44000', '9900', '9900', '0', '0', '0', '9900', '0', '0.015', '0.2');
+VALUES(13, '김현주', 'DB하이텍', '15', '660000', '0', '0', '0', '2024-05-29', '44000', '9900', '9900', '0', '0', '0', '9900', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(14, '김현주', '0', '0', '0', '네페스', '20', '670000', '2024-05-27', '33500', '10050', '0', '10050', '0', '134000', '0', '144050', '0.015', '0.2');
+VALUES(14, '김현주', '0', '0', '0', '네페스', '20', '670000', '2024-05-30', '33500', '10050', '0', '10050', '0', '134000', '0', '144050', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(15, '김현주', '후성', '80', '1056000', '0', '0', '0', '2024-05-27', '13200', '15840', '15840', '0', '0', '0', '15840', '0', '0.015', '0.2');
+VALUES(15, '김현주', '후성', '80', '1056000', '0', '0', '0', '2024-05-31', '13200', '15840', '15840', '0', '0', '0', '15840', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(16, '김현주', '0', '0', '0', 'LG전자', '4', '456000', '2024-05-27', '114000', '6840', '0', '6840', '0', '91200', '0', '98040', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(17, '김현주', 'LS일렉트릭', '5', '270000', '0', '0', '0', '2024-05-27', '54000', '4050', '4050', '0', '0', '0', '4050', '0', '0.015', '0.2');
+VALUES(17, '김현주', 'LS일렉트릭', '5', '270000', '0', '0', '0', '2024-05-28', '54000', '4050', '4050', '0', '0', '0', '4050', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(18, '김현주', '0', '0', '0', 'SK 시그넷', '10', '770000', '2024-05-27', '77000', '11550', '0', '11550', '0', '154000', '0', '165550', '0.015', '0.2');
+VALUES(18, '김현주', '0', '0', '0', 'SK 시그넷', '10', '770000', '2024-05-29', '77000', '11550', '0', '11550', '0', '154000', '0', '165550', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(19, '김현주', '모트렉스', '30', '714000', '0', '0', '0', '2024-05-27', '23800', '10710', '10710', '0', '0', '0', '10710', '0', '0.015', '0.2');
+VALUES(19, '김현주', '모트렉스', '30', '714000', '0', '0', '0', '2024-05-30', '23800', '10710', '10710', '0', '0', '0', '10710', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(20, '김현주', '0', '0', '0', '원익피앤이', '40', '1136000', '2024-05-27', '28400', '17040', '0', '17040', '0', '227200', '0', '244240', '0.015', '0.2');
+VALUES(20, '김현주', '0', '0', '0', '원익피앤이', '40', '1136000', '2024-05-31', '28400', '17040', '0', '17040', '0', '227200', '0', '244240', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(21, '배광호', '삼성전자', '12', '813600', '0', '0', '0', '2024-05-27', '67800', '12204', '12204', '0', '0', '0', '12204', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(22, '배광호', '0', '0', '0', 'SK하이닉스', '6', '675000', '2024-05-27', '112500', '10125', '0', '10125', '0', '135000', '0', '145125', '0.015', '0.2');
+VALUES(22, '배광호', '0', '0', '0', 'SK하이닉스', '6', '675000', '2024-05-28', '112500', '10125', '0', '10125', '0', '135000', '0', '145125', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(23, '배광호', 'DB하이텍', '18', '792000', '0', '0', '0', '2024-05-27', '44000', '11880', '11880', '0', '0', '0', '11880', '0', '0.015', '0.2');
+VALUES(23, '배광호', 'DB하이텍', '18', '792000', '0', '0', '0', '2024-05-29', '44000', '11880', '11880', '0', '0', '0', '11880', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(24, '배광호', '0', '0', '0', '네페스', '22', '737000', '2024-05-27', '33500', '11055', '0', '11055', '0', '147400', '0', '158455', '0.015', '0.2');
+VALUES(24, '배광호', '0', '0', '0', '네페스', '22', '737000', '2024-05-30', '33500', '11055', '0', '11055', '0', '147400', '0', '158455', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(25, '배광호', '후성', '70', '924000', '0', '0', '0', '2024-05-27', '13200', '13860', '13860', '0', '0', '0', '13860', '0', '0.015', '0.2');
+VALUES(25, '배광호', '후성', '70', '924000', '0', '0', '0', '2024-05-31', '13200', '13860', '13860', '0', '0', '0', '13860', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(26, '배광호', '0', '0', '0', 'LG전자', '3', '342000', '2024-05-27', '114000', '5130', '0', '5130', '0', '68400', '0', '73530', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(27, '배광호', 'LS일렉트릭', '12', '648000', '0', '0', '0', '2024-05-27', '54000', '9720', '9720', '0', '0', '0', '9720', '0', '0.015', '0.2');
+VALUES(27, '배광호', 'LS일렉트릭', '12', '648000', '0', '0', '0', '2024-05-28', '54000', '9720', '9720', '0', '0', '0', '9720', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(28, '배광호', '0', '0', '0', 'SK 시그넷', '8', '616000', '2024-05-27', '77000', '9240', '0', '9240', '0', '123200', '0', '132440', '0.015', '0.2');
+VALUES(28, '배광호', '0', '0', '0', 'SK 시그넷', '8', '616000', '2024-05-29', '77000', '9240', '0', '9240', '0', '123200', '0', '132440', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(29, '배광호', '모트렉스', '25', '595000', '0', '0', '0', '2024-05-27', '23800', '8925', '8925', '0', '0', '0', '8925', '0', '0.015', '0.2');
+VALUES(29, '배광호', '모트렉스', '25', '595000', '0', '0', '0', '2024-05-30', '23800', '8925', '8925', '0', '0', '0', '8925', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(30, '배광호', '0', '0', '0', '원익피앤이', '28', '795200', '2024-05-27', '28400', '11928', '0', '11928', '0', '159040', '0', '170968', '0.015', '0.2');
+VALUES(30, '배광호', '0', '0', '0', '원익피앤이', '28', '795200', '2024-05-31', '28400', '11928', '0', '11928', '0', '159040', '0', '170968', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(31, '허진', '삼성전자', '10', '678000', '0', '0', '0', '2024-05-27', '67800', '10170', '10170', '0', '0', '0', '10170', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(32, '허진', '0', '0', '0', 'SK하이닉스', '5', '562500', '2024-05-27', '112500', '8438', '0', '8437.5', '0', '112500', '0', '120937.5', '0.015', '0.2');
+VALUES(32, '허진', '0', '0', '0', 'SK하이닉스', '5', '562500', '2024-05-28', '112500', '8438', '0', '8437.5', '0', '112500', '0', '120937.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(33, '허진', 'DB하이텍', '20', '880000', '0', '0', '0', '2024-05-27', '44000', '13200', '13200', '0', '0', '0', '13200', '0', '0.015', '0.2');
+VALUES(33, '허진', 'DB하이텍', '20', '880000', '0', '0', '0', '2024-05-29', '44000', '13200', '13200', '0', '0', '0', '13200', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(34, '허진', '0', '0', '0', '네페스', '30', '1005000', '2024-05-27', '33500', '15075', '0', '15075', '0', '201000', '0', '216075', '0.015', '0.2');
+VALUES(34, '허진', '0', '0', '0', '네페스', '30', '1005000', '2024-05-30', '33500', '15075', '0', '15075', '0', '201000', '0', '216075', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(35, '허진', '후성', '60', '792000', '0', '0', '0', '2024-05-27', '13200', '11880', '11880', '0', '0', '0', '11880', '0', '0.015', '0.2');
+VALUES(35, '허진', '후성', '60', '792000', '0', '0', '0', '2024-05-31', '13200', '11880', '11880', '0', '0', '0', '11880', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(36, '허진', '0', '0', '0', 'LG전자', '5', '570000', '2024-05-27', '114000', '8550', '0', '8550', '0', '114000', '0', '122550', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(37, '허진', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-27', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
+VALUES(37, '허진', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-28', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(38, '허진', '0', '0', '0', 'SK 시그넷', '7', '539000', '2024-05-27', '77000', '8085', '0', '8085', '0', '107800', '0', '115885', '0.015', '0.2');
+VALUES(38, '허진', '0', '0', '0', 'SK 시그넷', '7', '539000', '2024-05-29', '77000', '8085', '0', '8085', '0', '107800', '0', '115885', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(39, '허진', '모트렉스', '20', '476000', '0', '0', '0', '2024-05-27', '23800', '7140', '7140', '0', '0', '0', '7140', '0', '0.015', '0.2');
+VALUES(39, '허진', '모트렉스', '20', '476000', '0', '0', '0', '2024-05-30', '23800', '7140', '7140', '0', '0', '0', '7140', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(40, '허진', '0', '0', '0', '원익피앤이', '25', '710000', '2024-05-27', '28400', '10650', '0', '10650', '0', '142000', '0', '152650', '0.015', '0.2');
+VALUES(40, '허진', '0', '0', '0', '원익피앤이', '25', '710000', '2024-05-31', '28400', '10650', '0', '10650', '0', '142000', '0', '152650', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(41, '이민재', '삼성전자', '8', '542400', '0', '0', '0', '2024-05-27', '67800', '8136', '8136', '0', '0', '0', '8136', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(42, '이민재', '0', '0', '0', 'SK하이닉스', '4', '450000', '2024-05-27', '112500', '6750', '0', '6750', '0', '90000', '0', '96750', '0.015', '0.2');
+VALUES(42, '이민재', '0', '0', '0', 'SK하이닉스', '4', '450000', '2024-05-28', '112500', '6750', '0', '6750', '0', '90000', '0', '96750', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(43, '이민재', 'DB하이텍', '10', '440000', '0', '0', '0', '2024-05-27', '44000', '6600', '6600', '0', '0', '0', '6600', '0', '0.015', '0.2');
+VALUES(43, '이민재', 'DB하이텍', '10', '440000', '0', '0', '0', '2024-05-29', '44000', '6600', '6600', '0', '0', '0', '6600', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(44, '이민재', '0', '0', '0', '네페스', '15', '502500', '2024-05-27', '33500', '7538', '0', '7537.5', '0', '100500', '0', '108037.5', '0.015', '0.2');
+VALUES(44, '이민재', '0', '0', '0', '네페스', '15', '502500', '2024-05-30', '33500', '7538', '0', '7537.5', '0', '100500', '0', '108037.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(45, '이민재', '후성', '30', '396000', '0', '0', '0', '2024-05-27', '13200', '5940', '5940', '0', '0', '0', '5940', '0', '0.015', '0.2');
+VALUES(45, '이민재', '후성', '30', '396000', '0', '0', '0', '2024-05-31', '13200', '5940', '5940', '0', '0', '0', '5940', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(46, '이민재', '0', '0', '0', 'LG전자', '6', '684000', '2024-05-27', '114000', '10260', '0', '10260', '0', '136800', '0', '147060', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(47, '이민재', 'LS일렉트릭', '7', '378000', '0', '0', '0', '2024-05-27', '54000', '5670', '5670', '0', '0', '0', '5670', '0', '0.015', '0.2');
+VALUES(47, '이민재', 'LS일렉트릭', '7', '378000', '0', '0', '0', '2024-05-28', '54000', '5670', '5670', '0', '0', '0', '5670', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(48, '이민재', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-27', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
+VALUES(48, '이민재', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-29', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(49, '이민재', '모트렉스', '10', '238000', '0', '0', '0', '2024-05-27', '23800', '3570', '3570', '0', '0', '0', '3570', '0', '0.015', '0.2');
+VALUES(49, '이민재', '모트렉스', '10', '238000', '0', '0', '0', '2024-05-30', '23800', '3570', '3570', '0', '0', '0', '3570', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(50, '이민재', '0', '0', '0', '원익피앤이', '12', '340800', '2024-05-27', '28400', '5112', '0', '5112', '0', '68160', '0', '73272', '0.015', '0.2');
+VALUES(50, '이민재', '0', '0', '0', '원익피앤이', '12', '340800', '2024-05-31', '28400', '5112', '0', '5112', '0', '68160', '0', '73272', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(51, '양동규', '삼성전자', '5', '339000', '0', '0', '0', '2024-05-27', '67800', '5085', '5085', '0', '0', '0', '5085', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(52, '양동규', '0', '0', '0', 'SK하이닉스', '2', '225000', '2024-05-27', '112500', '3375', '0', '3375', '0', '45000', '0', '48375', '0.015', '0.2');
+VALUES(52, '양동규', '0', '0', '0', 'SK하이닉스', '2', '225000', '2024-05-28', '112500', '3375', '0', '3375', '0', '45000', '0', '48375', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(53, '양동규', 'DB하이텍', '25', '1100000', '0', '0', '0', '2024-05-27', '44000', '16500', '16500', '0', '0', '0', '16500', '0', '0.015', '0.2');
+VALUES(53, '양동규', 'DB하이텍', '25', '1100000', '0', '0', '0', '2024-05-29', '44000', '16500', '16500', '0', '0', '0', '16500', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(54, '양동규', '0', '0', '0', '네페스', '35', '1172500', '2024-05-27', '33500', '17588', '0', '17587.5', '0', '234500', '0', '252087.5', '0.015', '0.2');
+VALUES(54, '양동규', '0', '0', '0', '네페스', '35', '1172500', '2024-05-30', '33500', '17588', '0', '17587.5', '0', '234500', '0', '252087.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(55, '양동규', '후성', '40', '528000', '0', '0', '0', '2024-05-27', '13200', '7920', '7920', '0', '0', '0', '7920', '0', '0.015', '0.2');
+VALUES(55, '양동규', '후성', '40', '528000', '0', '0', '0', '2024-05-31', '13200', '7920', '7920', '0', '0', '0', '7920', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(56, '양동규', '0', '0', '0', 'LG전자', '8', '912000', '2024-05-27', '114000', '13680', '0', '13680', '0', '182400', '0', '196080', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(57, '양동규', 'LS일렉트릭', '6', '324000', '0', '0', '0', '2024-05-27', '54000', '4860', '4860', '0', '0', '0', '4860', '0', '0.015', '0.2');
+VALUES(57, '양동규', 'LS일렉트릭', '6', '324000', '0', '0', '0', '2024-05-28', '54000', '4860', '4860', '0', '0', '0', '4860', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(58, '양동규', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-27', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
+VALUES(58, '양동규', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-29', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(59, '양동규', '모트렉스', '12', '285600', '0', '0', '0', '2024-05-27', '23800', '4284', '4284', '0', '0', '0', '4284', '0', '0.015', '0.2');
+VALUES(59, '양동규', '모트렉스', '12', '285600', '0', '0', '0', '2024-05-30', '23800', '4284', '4284', '0', '0', '0', '4284', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(60, '양동규', '0', '0', '0', '원익피앤이', '20', '568000', '2024-05-27', '28400', '8520', '0', '8520', '0', '113600', '0', '122120', '0.015', '0.2');
+VALUES(60, '양동규', '0', '0', '0', '원익피앤이', '20', '568000', '2024-05-31', '28400', '8520', '0', '8520', '0', '113600', '0', '122120', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(61, '이건우', '삼성전자', '7', '474600', '0', '0', '0', '2024-05-27', '67800', '7119', '7119', '0', '0', '0', '7119', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(62, '이건우', '0', '0', '0', 'SK하이닉스', '3', '337500', '2024-05-27', '112500', '5063', '0', '5062.5', '0', '67500', '0', '72562.5', '0.015', '0.2');
+VALUES(62, '이건우', '0', '0', '0', 'SK하이닉스', '3', '337500', '2024-05-28', '112500', '5063', '0', '5062.5', '0', '67500', '0', '72562.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(63, '이건우', 'DB하이텍', '10', '440000', '0', '0', '0', '2024-05-27', '44000', '6600', '6600', '0', '0', '0', '6600', '0', '0.015', '0.2');
+VALUES(63, '이건우', 'DB하이텍', '10', '440000', '0', '0', '0', '2024-05-29', '44000', '6600', '6600', '0', '0', '0', '6600', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(64, '이건우', '0', '0', '0', '네페스', '25', '837500', '2024-05-27', '33500', '12563', '0', '12562.5', '0', '167500', '0', '180062.5', '0.015', '0.2');
+VALUES(64, '이건우', '0', '0', '0', '네페스', '25', '837500', '2024-05-30', '33500', '12563', '0', '12562.5', '0', '167500', '0', '180062.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(65, '이건우', '후성', '55', '726000', '0', '0', '0', '2024-05-27', '13200', '10890', '10890', '0', '0', '0', '10890', '0', '0.015', '0.2');
+VALUES(65, '이건우', '후성', '55', '726000', '0', '0', '0', '2024-05-31', '13200', '10890', '10890', '0', '0', '0', '10890', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(66, '이건우', '0', '0', '0', 'LG전자', '3', '342000', '2024-05-27', '114000', '5130', '0', '5130', '0', '68400', '0', '73530', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(67, '이건우', 'LS일렉트릭', '5', '270000', '0', '0', '0', '2024-05-27', '54000', '4050', '4050', '0', '0', '0', '4050', '0', '0.015', '0.2');
+VALUES(67, '이건우', 'LS일렉트릭', '5', '270000', '0', '0', '0', '2024-05-28', '54000', '4050', '4050', '0', '0', '0', '4050', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(68, '이건우', '0', '0', '0', 'SK 시그넷', '8', '616000', '2024-05-27', '77000', '9240', '0', '9240', '0', '123200', '0', '132440', '0.015', '0.2');
+VALUES(68, '이건우', '0', '0', '0', 'SK 시그넷', '8', '616000', '2024-05-29', '77000', '9240', '0', '9240', '0', '123200', '0', '132440', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(69, '이건우', '모트렉스', '20', '476000', '0', '0', '0', '2024-05-27', '23800', '7140', '7140', '0', '0', '0', '7140', '0', '0.015', '0.2');
+VALUES(69, '이건우', '모트렉스', '20', '476000', '0', '0', '0', '2024-05-30', '23800', '7140', '7140', '0', '0', '0', '7140', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(70, '이건우', '0', '0', '0', '원익피앤이', '30', '852000', '2024-05-27', '28400', '12780', '0', '12780', '0', '170400', '0', '183180', '0.015', '0.2');
+VALUES(70, '이건우', '0', '0', '0', '원익피앤이', '30', '852000', '2024-05-31', '28400', '12780', '0', '12780', '0', '170400', '0', '183180', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(71, '노태호', '삼성전자', '9', '610200', '0', '0', '0', '2024-05-27', '67800', '9153', '9153', '0', '0', '0', '9153', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(72, '노태호', '0', '0', '0', 'SK하이닉스', '4', '450000', '2024-05-27', '112500', '6750', '0', '6750', '0', '90000', '0', '96750', '0.015', '0.2');
+VALUES(72, '노태호', '0', '0', '0', 'SK하이닉스', '4', '450000', '2024-05-28', '112500', '6750', '0', '6750', '0', '90000', '0', '96750', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(73, '노태호', 'DB하이텍', '15', '660000', '0', '0', '0', '2024-05-27', '44000', '9900', '9900', '0', '0', '0', '9900', '0', '0.015', '0.2');
+VALUES(73, '노태호', 'DB하이텍', '15', '660000', '0', '0', '0', '2024-05-29', '44000', '9900', '9900', '0', '0', '0', '9900', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(74, '노태호', '0', '0', '0', '네페스', '20', '670000', '2024-05-27', '33500', '10050', '0', '10050', '0', '134000', '0', '144050', '0.015', '0.2');
+VALUES(74, '노태호', '0', '0', '0', '네페스', '20', '670000', '2024-05-30', '33500', '10050', '0', '10050', '0', '134000', '0', '144050', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(75, '노태호', '후성', '50', '660000', '0', '0', '0', '2024-05-27', '13200', '9900', '9900', '0', '0', '0', '9900', '0', '0.015', '0.2');
+VALUES(75, '노태호', '후성', '50', '660000', '0', '0', '0', '2024-05-31', '13200', '9900', '9900', '0', '0', '0', '9900', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(76, '노태호', '0', '0', '0', 'LG전자', '5', '570000', '2024-05-27', '114000', '8550', '0', '8550', '0', '114000', '0', '122550', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(77, '노태호', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-27', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
+VALUES(77, '노태호', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-28', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(78, '노태호', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-27', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
+VALUES(78, '노태호', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-29', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(79, '노태호', '모트렉스', '10', '238000', '0', '0', '0', '2024-05-27', '23800', '3570', '3570', '0', '0', '0', '3570', '0', '0.015', '0.2');
+VALUES(79, '노태호', '모트렉스', '10', '238000', '0', '0', '0', '2024-05-30', '23800', '3570', '3570', '0', '0', '0', '3570', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(80, '노태호', '0', '0', '0', '원익피앤이', '15', '426000', '2024-05-27', '28400', '6390', '0', '6390', '0', '85200', '0', '91590', '0.015', '0.2');
+VALUES(80, '노태호', '0', '0', '0', '원익피앤이', '15', '426000', '2024-05-31', '28400', '6390', '0', '6390', '0', '85200', '0', '91590', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(81, '이준휘', '삼성전자', '12', '813600', '0', '0', '0', '2024-05-27', '67800', '12204', '12204', '0', '0', '0', '12204', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(82, '이준휘', '0', '0', '0', 'SK하이닉스', '8', '900000', '2024-05-27', '112500', '13500', '0', '13500', '0', '180000', '0', '193500', '0.015', '0.2');
+VALUES(82, '이준휘', '0', '0', '0', 'SK하이닉스', '8', '900000', '2024-05-28', '112500', '13500', '0', '13500', '0', '180000', '0', '193500', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(83, '이준휘', 'DB하이텍', '20', '880000', '0', '0', '0', '2024-05-27', '44000', '13200', '13200', '0', '0', '0', '13200', '0', '0.015', '0.2');
+VALUES(83, '이준휘', 'DB하이텍', '20', '880000', '0', '0', '0', '2024-05-29', '44000', '13200', '13200', '0', '0', '0', '13200', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(84, '이준휘', '0', '0', '0', '네페스', '35', '1172500', '2024-05-27', '33500', '17588', '0', '17587.5', '0', '234500', '0', '252087.5', '0.015', '0.2');
+VALUES(84, '이준휘', '0', '0', '0', '네페스', '35', '1172500', '2024-05-30', '33500', '17588', '0', '17587.5', '0', '234500', '0', '252087.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(85, '이준휘', '후성', '40', '528000', '0', '0', '0', '2024-05-27', '13200', '7920', '7920', '0', '0', '0', '7920', '0', '0.015', '0.2');
+VALUES(85, '이준휘', '후성', '40', '528000', '0', '0', '0', '2024-05-31', '13200', '7920', '7920', '0', '0', '0', '7920', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(86, '이준휘', '0', '0', '0', 'LG전자', '5', '570000', '2024-05-27', '114000', '8550', '0', '8550', '0', '114000', '0', '122550', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(87, '이준휘', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-27', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
+VALUES(87, '이준휘', 'LS일렉트릭', '10', '540000', '0', '0', '0', '2024-05-28', '54000', '8100', '8100', '0', '0', '0', '8100', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(88, '이준휘', '0', '0', '0', 'SK 시그넷', '8', '616000', '2024-05-27', '77000', '9240', '0', '9240', '0', '123200', '0', '132440', '0.015', '0.2');
+VALUES(88, '이준휘', '0', '0', '0', 'SK 시그넷', '8', '616000', '2024-05-29', '77000', '9240', '0', '9240', '0', '123200', '0', '132440', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(89, '이준휘', '모트렉스', '25', '595000', '0', '0', '0', '2024-05-27', '23800', '8925', '8925', '0', '0', '0', '8925', '0', '0.015', '0.2');
+VALUES(89, '이준휘', '모트렉스', '25', '595000', '0', '0', '0', '2024-05-30', '23800', '8925', '8925', '0', '0', '0', '8925', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(90, '이준휘', '0', '0', '0', '원익피앤이', '20', '568000', '2024-05-27', '28400', '8520', '0', '8520', '0', '113600', '0', '122120', '0.015', '0.2');
+VALUES(90, '이준휘', '0', '0', '0', '원익피앤이', '20', '568000', '2024-05-31', '28400', '8520', '0', '8520', '0', '113600', '0', '122120', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(91, '김호주', '삼성전자', '8', '542400', '0', '0', '0', '2024-05-27', '67800', '8136', '8136', '0', '0', '0', '8136', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(92, '김호주', '0', '0', '0', 'SK하이닉스', '4', '450000', '2024-05-27', '112500', '6750', '0', '6750', '0', '90000', '0', '96750', '0.015', '0.2');
+VALUES(92, '김호주', '0', '0', '0', 'SK하이닉스', '4', '450000', '2024-05-28', '112500', '6750', '0', '6750', '0', '90000', '0', '96750', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(93, '김호주', 'DB하이텍', '10', '440000', '0', '0', '0', '2024-05-27', '44000', '6600', '6600', '0', '0', '0', '6600', '0', '0.015', '0.2');
+VALUES(93, '김호주', 'DB하이텍', '10', '440000', '0', '0', '0', '2024-05-29', '44000', '6600', '6600', '0', '0', '0', '6600', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(94, '김호주', '0', '0', '0', '네페스', '15', '502500', '2024-05-27', '33500', '7538', '0', '7537.5', '0', '100500', '0', '108037.5', '0.015', '0.2');
+VALUES(94, '김호주', '0', '0', '0', '네페스', '15', '502500', '2024-05-30', '33500', '7538', '0', '7537.5', '0', '100500', '0', '108037.5', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(95, '김호주', '후성', '30', '396000', '0', '0', '0', '2024-05-27', '13200', '5940', '5940', '0', '0', '0', '5940', '0', '0.015', '0.2');
+VALUES(95, '김호주', '후성', '30', '396000', '0', '0', '0', '2024-05-31', '13200', '5940', '5940', '0', '0', '0', '5940', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
 VALUES(96, '김호주', '0', '0', '0', 'LG전자', '6', '684000', '2024-05-27', '114000', '10260', '0', '10260', '0', '136800', '0', '147060', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(97, '김호주', 'LS일렉트릭', '7', '378000', '0', '0', '0', '2024-05-27', '54000', '5670', '5670', '0', '0', '0', '5670', '0', '0.015', '0.2');
+VALUES(97, '김호주', 'LS일렉트릭', '7', '378000', '0', '0', '0', '2024-05-28', '54000', '5670', '5670', '0', '0', '0', '5670', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(98, '김호주', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-27', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
+VALUES(98, '김호주', '0', '0', '0', 'SK 시그넷', '5', '385000', '2024-05-29', '77000', '5775', '0', '5775', '0', '77000', '0', '82775', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(99, '김호주', '모트렉스', '10', '238000', '0', '0', '0', '2024-05-27', '23800', '3570', '3570', '0', '0', '0', '3570', '0', '0.015', '0.2');
+VALUES(99, '김호주', '모트렉스', '10', '238000', '0', '0', '0', '2024-05-30', '23800', '3570', '3570', '0', '0', '0', '3570', '0', '0.015', '0.2');
 INSERT INTO transactions (id, username, buy_stock, buy_quantity, buy_total, sell_stock, sell_quantity, sell_total, trade_date, closing_Price, net_profit, purchase_fee, selling_fee, purchase_tax, selling_tax, purchase_total, selling_total, standard_fee, base_tax)
-VALUES(100, '김호주', '0', '0', '0', '원익피앤이', '12', '340800', '2024-05-27', '28400', '5112', '0', '5112', '0', '68160', '0', '73272', '0.015', '0.2');
+VALUES(100, '김호주', '0', '0', '0', '원익피앤이', '12', '340800', '2024-05-31', '28400', '5112', '0', '5112', '0', '68160', '0', '73272', '0.015', '0.2');
 
 
 insert into users (id, username, password, name, age, sex, email, address, phone, asset, color, investment_propensity, mod_date, reg_date) values (1, 'gjwlsdj12#123', 'pO2(eO73)%@', '제갈민', '6403211570892', 'male', 'jgs0318@gmail.com', '서울특별시 강남구', '010-2212-0694', 8200000, 'RED', '매우 공격', '2023-04-08 18:34:19', '2023-12-31 06:36:58');

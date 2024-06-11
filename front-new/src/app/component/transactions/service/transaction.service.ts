@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ITransaction } from "../model/transaction.model";
-import { findAlltransactionsAPI, findCountAPI } from "./transaction.api";
+import { findAlltransactionsAPI, findCountAPI, findNetProfitByDateAPI } from "./transaction.api";
 
 
 export const findAllTransactions: any = createAsyncThunk( 
@@ -14,11 +14,11 @@ export const findAllTransactions: any = createAsyncThunk(
         return data
     }
 )
-// export const findAllTransactionById: any = createAsyncThunk( 
-//     'Transactions/findAllTransactionById',                      
-//     async (id: number) => (await findTransactionByIdAPI(id))
+export const findNetProfitByDate: any = createAsyncThunk( 
+    'Transactions/findNetProfitByDate',                      
+    async () => (await findNetProfitByDateAPI())
    
-// )
+)
 
 export const findCount: any = createAsyncThunk( 
     'Transactions/findCount',                      

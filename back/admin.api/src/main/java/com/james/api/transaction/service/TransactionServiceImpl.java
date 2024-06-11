@@ -4,6 +4,7 @@ import com.james.api.admin.model.Admin;
 import com.james.api.common.component.Messenger;
 import com.james.api.transaction.model.Transaction;
 import com.james.api.transaction.model.TransactionDto;
+import com.james.api.transaction.repository.TransactionDaoImpl;
 import com.james.api.transaction.repository.TransactionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Log4j2
@@ -41,7 +43,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public List<TransactionDto> findAll() throws SQLException {
-        return transactionRepository.findAll().stream().map(i->entityToDto(i)).toList();
+        return transactionRepository.getAllTransactions().stream().toList();
     }
 
     @Override
@@ -51,11 +53,16 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public Long count() {
-        return transactionRepository.count();
+        return transactionRepository.countAllTransactions();
     }
 
     @Override
     public boolean existsById(Long id) {
         return false;
+    }
+
+    @Override
+    public Map<String, Double> getNetProfitByDate() {
+        return transactionRepository.getNetProfitByDate();
     }
 }

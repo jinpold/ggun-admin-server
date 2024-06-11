@@ -49,7 +49,7 @@ public class JwtProvider {
                 .expiration(Date.from(expiredDate))
                 .claim("sub", "turing")
                 .claim("username", adminDto.getUsername())
-//                .claim("role", adminDto.getRole())  // 관리자(ad), 소비자 (role)
+                .claim("role", adminDto.getRole())  // 관리자(ad), 소비자 (role)
                 .claim("adminId", adminDto.getId())
                 .compact();
 
