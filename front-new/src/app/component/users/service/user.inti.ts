@@ -12,7 +12,7 @@ export const initialState: IUser = {
     address: "",
     phone: "",
     asset: 0,
-    mbti: "",
+    color: "",
     investmentPropensity: "",
     role: "",
     regDate: "",

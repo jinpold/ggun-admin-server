@@ -17,12 +17,13 @@ const token:string|null = parseCookies()?.accessToken;
 
 export const linkButtonTitles = [
     {id: 0, title: 'HOME', path: '/' },
-    {id: 1, title: '게시판', path: `${PG.BOARD}/list` },
-    {id: 2, title: '회원가입', path: `${PG.USER}/join` },
-    {id: 3, title: '회원 정보변경', path: `${PG.USER}/detail/${token ? jwtDecode<any>(token).id : 0}` },
+    {id: 1, title: '임직원 게시판', path: `${PG.BOARD}/list` },
+    // {id: 2, title: '신규 생성', path: `${PG.ADMIN}/join` },
+    // {id: 3, title: '임직원 정보변경', path: `${PG.ADMIN}/detail/${token ? jwtDecode<any>(token).id : 0}` },
     {id: 4, title: '사용자 관리', path: `${PG.USER}/list`},
     {id: 5, title: '임직원 관리', path: `${PG.ADMIN}/list`},
-    {id: 6, title: '거래 실적', path: `${PG.TRANSACTION}/list`}
+    {id: 6, title: '거래 실적관리', path: `${PG.TRANSACTION}/list`},
+    {id: 7, title: '거래 실적차트', path: `${PG.TRANSACTION}/chart`}
 ];
 
 const theme = createTheme({

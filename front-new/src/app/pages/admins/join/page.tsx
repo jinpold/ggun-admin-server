@@ -49,7 +49,7 @@ export default function Join() {
               <div className="flex flex-col items-center">
                 <div className="text-center">
                   <h1 className="text-xl xl:text-2xl font-extrabold text-indigo-950">
-                    Sign up
+                    임직원 계정 신규 생성
                   </h1>
                   <p className="text-[10px] text-gray-500">
                     Hey enter your details to create your account
@@ -60,7 +60,7 @@ export default function Join() {
                     <input
                       className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
-                      placeholder="Enter your ID" name="username" onChange={handleUsername}
+                      placeholder="ID : 사원번호 " name="username" onChange={handleUsername}
                     />
                     <input
                       className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
@@ -70,37 +70,37 @@ export default function Join() {
                     <input
                       className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
-                      placeholder="Enter your name" name="name" onChange={handleUsername}
+                      placeholder="Enter your enpName" name="enpName" onChange={handleUsername}
                     />
                     <input
                       className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
-                      placeholder="Enter your 주민번호 기입 (특수 기호 생략)" name="age" onChange={handleUsername}
+                      placeholder="Enter your department" name="department" onChange={handleUsername}
                     />
                     <input
                       className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
-                      placeholder="Enter your email" name="email" onChange={handleUsername}
+                      placeholder="Enter your position" name="position" onChange={handleUsername}
                     />
                     <input
                       className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
-                      placeholder="Enter your address" name="address" onChange={handleUsername}
+                      placeholder="Enter your job" name="job" onChange={handleUsername}
                     />
                     <input
                       className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="tel"
-                      placeholder="Enter your phone" name="phone" onChange={handleUsername}
+                      placeholder="Enter your email" name="enpEmail" onChange={handleUsername}
                     />
                     <select
                      className="w-full px-3 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 text-gray-500 text-xs focus:outline-none focus:border-gray-400 focus:bg-white"
                      name="mbti" onChange={handleUsername}>
-                     <option value="">Select your Color</option>
-                     <option value="RED">RED</option>
-                     <option value="YELLOW">YELLOW</option>
-                     <option value="PURPLE">PURPLE</option>
-                     <option value="BLUE">BLUE</option>
-                     <option value="GREEN">GREEN</option>
+                     <option value="">Select your role</option>
+                     <option value="Super_Admin">G1</option>
+                     <option value="hr_Admin">G2</option>
+                     <option value="Exec_Admin">G3</option>
+                     <option value="Staff_Admin">G4</option>
+                     <option value="User">G5</option>
                     </select>
                     <button className="mt-4 tracking-wide font-semibold bg-indigo-950 text-gray-100 w-full py-3 rounded-lg hover:bg-pink-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                     onClick={handleSubmit}>

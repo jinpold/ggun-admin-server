@@ -53,7 +53,6 @@ public class TransactionDaoImpl implements TransactionDao {
                                 transaction.standardFee,
                                 transaction.baseTax))
                 .from(transaction)
-//                .orderBy(transaction.buyStock.desc())
                 .fetch();
     }
 

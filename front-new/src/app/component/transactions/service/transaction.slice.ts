@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import {findAllTransactions, findCount } from "./transaction.service"
+import {findAllTransactions, findCount, findNetProfitByDate } from "./transaction.service"
 import { ITransaction } from "../model/transaction.model"
 
 const adminThunks = [findAllTransactions]
@@ -40,15 +40,18 @@ export const transactionSlice = createSlice({
             .addCase(findAllTransactions.fulfilled, (state: any, { payload }: any) => { state.array = payload })
             // .addCase(findAllTransactionById.fulfilled, (state: any, { payload }: any) => { state.json = payload })
             .addCase(findCount.fulfilled, (state: any, { payload }: any) => { state.count = payload })
+            .addCase(findNetProfitByDate.fulfilled, (state: any, { payload }: any) => { state.json = payload })
     }
 })
 
 export const getAllTransactions = (state: any) => state.transaction.array;
 export const getSingleTransaction = (state: any) => state.transaction.json;
 export const getCountTransaction = (state: any) => state.transaction.count;
+export const getMsgTransaction = (state: any) => state.transaction.text;
 export const getAuth = (state: any) => state.transaction.auth;
 export const getflag = (state: any) => state.transaction.text;
 export const getCount = (state: any) => (state.transaction.count)
+export const getNetProfit = (state: any) => state.transaction.json;
 
 export const { } = transactionSlice.actions
 

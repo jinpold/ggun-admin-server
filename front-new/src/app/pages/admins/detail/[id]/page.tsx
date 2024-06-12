@@ -31,7 +31,7 @@ export default function AdminDetailPage({params}:any) {
     dispatch(modifyUserById(data))
       .then((res:any)=>{
         alert('user information modify success.' + res.payload.id)
-        location.reload();
+        router.push(`${PG.ADMIN}/detail/${jwtDecode<any>(parseCookies().accessToken).res.payload.id}`);
       })
       .catch((error:any)=>{
         alert('user information modify fail.')
@@ -58,7 +58,7 @@ export default function AdminDetailPage({params}:any) {
               <div className="text-center">
                 <h1 className="text-xl xl:text-2xl font-extrabold text-indigo-950">
                   {MyTypography(jwtDecode<any>(parseCookies().accessToken).username, "1.5rem")}
-                  My Page
+                  admin Page
                 </h1>
                 <p className="text-[10px] text-gray-500 mt-1">변경사항을 기입하세요</p>
               </div>
@@ -94,23 +94,53 @@ export default function AdminDetailPage({params}:any) {
                     />
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Street Address</label>
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">department</label>
                     <input
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
-                      {...register('address', { required: true })}
-                      placeholder="555 Roadrunner Lane"
-                      name="address"
+                      {...register('department', { required: true })}
+                      placeholder="department"
+                      name="department"
                     />
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Phone</label>
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">position</label>
+                    <input
+                      className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                      type="text"
+                      {...register('position', { required: true })}
+                      placeholder="position"
+                      name="position"
+                    />
+                  </div>
+                  <div>
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">job</label>
+                    <input
+                      className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                      type="text"
+                      {...register('job', { required: true })}
+                      placeholder="job"
+                      name="job"
+                    />
+                  </div>
+                  <div>
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">phone</label>
                     <input
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
                       {...register('phone', { required: true })}
-                      placeholder="(555) 555-5555"
+                      placeholder="phone"
                       name="phone"
+                    />
+                  </div>
+                  <div>
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">role</label>
+                    <input
+                      className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                      type="text"
+                      {...register('role', { required: true })}
+                      placeholder="role"
+                      name="role"
                     />
                   </div>
                   <div className="flex justify-between mt-4">

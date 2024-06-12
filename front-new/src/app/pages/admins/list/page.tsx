@@ -8,6 +8,10 @@ import { get } from "http"
 import { getAllAdmins, getCountAdmin } from "@/app/component/admins/service/admin.slice"
 import { findAllAdmins, findCount } from "@/app/component/admins/service/admin.service"
 import adminColumns from "@/app/component/admins/modul/admin-columns"
+import { PG } from "@/app/component/common/enums/PG"
+import MoveButton from "@/app/atoms/button/MoveButton"
+import { jwtDecode } from "jwt-decode"
+import { parseCookies } from "nookies"
 
 const AdimnsPage: NextPage = () => {
     const [pageSize, setPageSize] = useState(5); 
@@ -32,8 +36,13 @@ const AdimnsPage: NextPage = () => {
                     pageSizeOptions={[5, 10, 20]} 
                     checkboxSelection
                 />}
+
+             <td>
+            <MoveButton text={"계정 생성"} path={`${PG.ADMIN}/join`}/>
+             </td>
             </div>
         </>
     )
 }
+// path={`${PG.ADMIN}/detail/${jwtDecode<any>(parseCookies().accessToken).adminId}`}
 export default AdimnsPage

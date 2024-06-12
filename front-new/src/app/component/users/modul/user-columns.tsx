@@ -63,7 +63,7 @@ export default function userColumns(): GridColDef[] {
             minWidth: 30,
             sortable: false,
             field: 'sex',
-            headerName: 'sex',
+            headerName: 'SEX',
             renderCell: ({ row }: CellType) => MyTypography(row.sex, "1.5rem")
         },
         {
@@ -102,9 +102,9 @@ export default function userColumns(): GridColDef[] {
             flex: 0.04,
             minWidth: 30,
             sortable: false,
-            field: 'mbti',
-            headerName: 'MBTI',
-            renderCell: ({ row }: CellType) => MyTypography(row.mbti, "1.5rem")
+            field: 'color',
+            headerName: 'COLOR',
+            renderCell: ({ row }: CellType) => MyTypography(row.color, "1.5rem")
         },
         {
             flex: 0.04,
@@ -119,7 +119,7 @@ export default function userColumns(): GridColDef[] {
             minWidth: 30,
             sortable: false,
             field: 'role',
-            headerName: 'role',
+            headerName: 'ROLE',
             renderCell: ({ row }: CellType) => MyTypography(row.role, "1.5rem")
         }
     ]

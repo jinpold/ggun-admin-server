@@ -9,7 +9,7 @@ export interface IUser {
     address?: string;
     phone?: string;
     asset?: number;
-    mbti?: string;
+    color?: string;
     investmentPropensity?: string;
     role?: string;
     regDate?: string;
