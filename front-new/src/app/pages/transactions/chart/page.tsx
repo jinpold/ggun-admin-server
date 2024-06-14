@@ -5,6 +5,7 @@ import { Chart } from "react-chartjs-2";
 import { useDispatch, useSelector } from "react-redux";
 import { get } from "http";
 import { getCount } from "@/app/component/transactions/service/transaction.slice";
+import { findCount } from "@/app/component/transactions/service/transaction.service";
 
 
 export default function NewsPage() {
@@ -12,11 +13,17 @@ export default function NewsPage() {
     const dispatch = useDispatch()
     const countTransactions = useSelector(getCount)
 
+    useEffect(() => {
+        dispatch(findCount())
+    }, [dispatch])
+
 
     return (
         <div>
+            <h2> 거래건수 :{countTransactions} </h2>
             <div className='flex justify-center w-screen h-screen'>
                 {/* <Mychart nps={allNps} /> */}
+
                 <Chart2/>
             </div>
 

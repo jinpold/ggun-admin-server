@@ -15,7 +15,7 @@ import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from "react-redux"
 
-export default function AdminDetailPage({params}:any) {
+export default function AdminDetailPage({params}: any) {
   const dispatch = useDispatch()
   const router = useRouter();
 
@@ -29,16 +29,22 @@ export default function AdminDetailPage({params}:any) {
   
     data.id = adminInfo.adminId;
     dispatch(modifyUserById(data))
-      .then((res:any)=>{
+      .then((res: any) => {
         alert('user information modify success.' + res.payload.id)
         router.push(`${PG.ADMIN}/detail/${jwtDecode<any>(parseCookies().accessToken).res.payload.id}`);
       })
-      .catch((error:any)=>{
+      .catch((error: any) => {
         alert('user information modify fail.')
       })
   }
 
-  
+  const options = {
+    department: ["HR", "Engineering", "Marketing", "Sales", "Finance"],
+    position: ["Manager", "Developer", "Analyst", "Consultant", "Intern"],
+    job: ["Admin", "Support", "Executive", "Coordinator", "Specialist"],
+    role: ["Admin", "User", "Guest", "Moderator", "Editor"]
+  };
+
   return (
     <Card sx={{ padding: '1.5rem', height: 'auto', maxWidth: '600px', margin: 'auto', marginTop: '2rem', borderRadius: '12px', border: '2px solid #003366' }}>
       <div className="mb-4 text-center">
@@ -94,37 +100,43 @@ export default function AdminDetailPage({params}:any) {
                     />
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">department</label>
-                    <input
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Department</label>
+                    <select
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                      type="text"
                       {...register('department', { required: true })}
-                      placeholder="department"
                       name="department"
-                    />
+                    >
+                      {options.department.map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">position</label>
-                    <input
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Position</label>
+                    <select
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                      type="text"
                       {...register('position', { required: true })}
-                      placeholder="position"
                       name="position"
-                    />
+                    >
+                      {options.position.map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">job</label>
-                    <input
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Job</label>
+                    <select
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                      type="text"
                       {...register('job', { required: true })}
-                      placeholder="job"
                       name="job"
-                    />
+                    >
+                      {options.job.map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">phone</label>
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Phone</label>
                     <input
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                       type="text"
@@ -134,14 +146,16 @@ export default function AdminDetailPage({params}:any) {
                     />
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">role</label>
-                    <input
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Role</label>
+                    <select
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                      type="text"
                       {...register('role', { required: true })}
-                      placeholder="role"
                       name="role"
-                    />
+                    >
+                      {options.role.map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
                   </div>
                   <div className="flex justify-between mt-4">
                     <button

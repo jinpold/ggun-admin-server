@@ -1,4 +1,5 @@
 package com.james.api.transaction.repository;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.james.api.transaction.model.TransactionDto;
 import org.springframework.data.jpa.repository.Query;
 
@@ -12,6 +13,11 @@ public interface TransactionDao {
     Long countAllTransactions();
 
     List<TransactionDto> getAllTransactions();
+
+    Map<String, Double> getTotalByDate();
+
+    Map<String, Map<String, Integer>> getQuantityByDate();
+
 
 //    @Query("SELECT t FROM Transactions t ORDER BY t.id DESC")
     Long getTransactionsById();

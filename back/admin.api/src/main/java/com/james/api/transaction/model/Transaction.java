@@ -50,6 +50,8 @@ public class Transaction extends BaseEntity {
     private String standardFee;
     @Column(name = "base_tax")
     private String baseTax;
+    @Column(name = "trade_total")
+    private String tradeTotal;
 
 }
 

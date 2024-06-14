@@ -50,4 +50,14 @@ public class TransactionController {
     public ResponseEntity<Map<String, Double>> getNetProfitByDate() {
         return ResponseEntity.ok(service.getNetProfitByDate());
     }
+
+    @GetMapping("/TotalByDate")
+    public ResponseEntity<Map<String, Double>> getTotalByDate() {
+        return ResponseEntity.ok(service.getTotalByDate());
+    }
+
+    @GetMapping("/QuantityByDate")
+    public ResponseEntity<Map<String, Map<String, Integer>>> getQuantityByDate() {
+        return ResponseEntity.ok(service.getQuantityByDate());
+    }
 }

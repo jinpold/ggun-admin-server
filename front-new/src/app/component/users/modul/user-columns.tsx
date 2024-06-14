@@ -122,5 +122,6 @@ export default function userColumns(): GridColDef[] {
             headerName: 'ROLE',
             renderCell: ({ row }: CellType) => MyTypography(row.role, "1.5rem")
         }
+        
     ]
 }

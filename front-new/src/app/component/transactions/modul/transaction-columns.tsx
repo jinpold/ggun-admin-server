@@ -101,6 +101,14 @@ export default function transactionColumns(): GridColDef[] {
             field: 'netProfit',
             headerName: '순이익',
             renderCell: ({ row }: CellType) => MyTypography(row.netProfit, "1.5rem")
+        },
+        {
+            flex: 0.04,
+            minWidth: 30,
+            sortable: false,
+            field: 'tradeTotal',
+            headerName: '매도&매수 총액',
+            renderCell: ({ row }: CellType) => MyTypography(row.tradeTotal, "1.5rem")
         }
     ]
 }

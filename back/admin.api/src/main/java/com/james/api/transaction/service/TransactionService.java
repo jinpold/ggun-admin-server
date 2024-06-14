@@ -1,4 +1,5 @@
 package com.james.api.transaction.service;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.james.api.common.service.CommandService;
 import com.james.api.common.service.QueryService;
 import com.james.api.transaction.model.Transaction;
@@ -10,6 +11,10 @@ import java.util.Map;
 public interface TransactionService extends CommandService<TransactionDto>, QueryService<TransactionDto> {
 
     Map<String, Double> getNetProfitByDate();
+
+    Map<String, Double> getTotalByDate();
+
+    Map<String, Map<String, Integer>> getQuantityByDate();
 
     default Transaction dtoToEntity(TransactionDto dto){
         return Transaction.builder()
@@ -32,6 +37,7 @@ public interface TransactionService extends CommandService<TransactionDto>, Quer
                 .sellingTotal(dto.getSellingTotal())
                 .standardFee(dto.getStandardFee())
                 .baseTax(dto.getBaseTax())
+                .tradeTotal(dto.getTradeTotal())
                 .build();
     }
 
@@ -56,6 +62,7 @@ public interface TransactionService extends CommandService<TransactionDto>, Quer
                 .sellingTotal(ent.getSellingTotal())
                 .standardFee(ent.getStandardFee())
                 .baseTax(ent.getBaseTax())
+                .tradeTotal(ent.getTradeTotal())
                 .build();
     }
 }

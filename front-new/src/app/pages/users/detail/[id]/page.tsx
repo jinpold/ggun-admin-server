@@ -14,7 +14,7 @@ import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from "react-redux"
 
-export default function UserDetailPage({params}:any) {
+export default function UserDetailPage({params}: any) {
   const dispatch = useDispatch()
   const router = useRouter();
 
@@ -28,17 +28,17 @@ export default function UserDetailPage({params}:any) {
   
     data.id = userInfo.userId;
     dispatch(modifyUserById(data))
-      .then((res:any)=>{
+      .then((res: any) => {
         alert('user information modify success.' + res.payload.id)
-        // location.reload();
         router.push(`${PG.USER}/detail/${jwtDecode<any>(parseCookies().accessToken).res.payload.id}`);
       })
-      .catch((error:any)=>{
+      .catch((error: any) => {
         alert('user information modify fail.')
       })
   }
 
-  
+  const roleOptions = ["visitor", "User"];
+
   return (
     <Card sx={{ padding: '1.5rem', height: 'auto', maxWidth: '600px', margin: 'auto', marginTop: '2rem', borderRadius: '12px', border: '2px solid #003366' }}>
       <div className="mb-4 text-center">
@@ -104,14 +104,16 @@ export default function UserDetailPage({params}:any) {
                     />
                   </div>
                   <div>
-                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Phone</label>
-                    <input
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2">Role</label>
+                    <select
                       className="w-full px-4 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                      type="text"
-                      {...register('phone', { required: true })}
-                      placeholder="(555) 555-5555"
-                      name="phone"
-                    />
+                      {...register('role', { required: true })}
+                      name="role"
+                    >
+                      {roleOptions.map((option, index) => (
+                        <option key={index} value={option}>{option}</option>
+                      ))}
+                    </select>
                   </div>
                   <div className="flex justify-between mt-4">
                     <button

@@ -40,6 +40,30 @@ export const findNetProfitByDateAPI = async () =>{
     }
 }
 
+export const findTotalByDateAPI = async () =>{ 
+    try{                                                       
+        const response = await instance().get('/transactions/TotalByDate',{
+            params: {}
+        })
+        return response.data
+    }catch(error){
+        console.log(error)
+        return error
+    }
+}
+
+export const findQuantityDate = async () =>{ 
+    try{                                                       
+        const response = await instance().get('/transactions/QuantityByDate',{
+            params: {}
+        })
+        return response.data
+    }catch(error){
+        console.log(error)
+        return error
+    }
+}
+
 export const findCountAPI = async () =>{    
     try{                                                        
         const response = await instance().get('/transactions/count',{

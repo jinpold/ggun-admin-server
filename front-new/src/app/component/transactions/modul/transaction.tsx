@@ -1,70 +1,93 @@
-import { useRef, useEffect, MutableRefObject } from 'react';
-import { Bar, Doughnut, Line } from 'react-chartjs-2';
+import { useEffect, useState } from 'react';
+import { Bar } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
     PointElement,
     LineElement,
-    BarElement, // 추가된 부분
+    BarElement,
     Title,
     Tooltip,
     Legend,
 } from 'chart.js';
-import { NextPage } from 'next';
-import { useSelector, useDispatch } from 'react-redux';
-import { ITransaction } from '../model/transaction.model';
-import { getAllTransactions, getNetProfit } from '../service/transaction.slice';
-import { findAllTransactions, findCount, findNetProfitByDate } from '../service/transaction.service';
+import { useDispatch } from 'react-redux';
+import { findNetProfitByDate, findTotalByDate } from '../service/transaction.service';
 
 ChartJS.register(
     CategoryScale,
     LinearScale,
     PointElement,
     LineElement,
-    BarElement, 
+    BarElement,
     Title,
     Tooltip,
     Legend
 );
 
+interface NetProfitData {
+    tradeDate: string;
+    netProfit: number;
+}
+
+interface TotalDateData {
+    tradeDate: string;
+    total: number;
+}
+
 function Demo2() {
-    const netProfitMap = useSelector(getNetProfit);
+    // const netProfitMap = useSelector(getNetProfit);
+    // const totalDateMap = useSelector(getTotalDate);
+    // const countTrade = useSelector(getCountTransaction);
     const dispatch = useDispatch();
 
+    const [netProfitData, setNetProfitData] = useState<NetProfitData[]>([]);
+    const [totalDateData, setTotalDateData] = useState<TotalDateData[]>([]);
+
     useEffect(() => {
-        dispatch(findCount())
         dispatch(findNetProfitByDate())
             .then((res: any) => {
-                console.log("res : " + JSON.stringify(res));
+                const data = Object.entries(res.payload).map(([tradeDate, netProfit]) => ({
+                    tradeDate,
+                    netProfit: netProfit as number,
+                }));
+                data.sort((a, b) => new Date(a.tradeDate).getTime() - new Date(b.tradeDate).getTime());
+                setNetProfitData(data);
             });
+
+        dispatch(findTotalByDate())
+            .then((res: any) => {
+                const data = Object.entries(res.payload).map(([tradeDate, total]) => ({
+                    tradeDate,
+                    total: total as number,
+                }));
+                data.sort((a, b) => new Date(a.tradeDate).getTime() - new Date(b.tradeDate).getTime());
+                setTotalDateData(data);
+            });
+        
     }, [dispatch]);
 
-    // Map을 배열로 변환
-    const allTransactions = Object.entries(netProfitMap).map(([tradeDate, netProfit]) => ({
-        tradeDate,
-        netProfit,
-    }));
-
     const data: any = {
-        labels: allTransactions.map((i) => i.tradeDate),
+        labels: netProfitData.map((i) => i.tradeDate),
         datasets: [
             {
                 label: '일별 순이익',
-                type: 'bar', 
-                data: allTransactions.map((i) => i.netProfit),
-                backgroundColor: 'rgb(54, 162, 235)',
+                type: 'bar',
+                data: netProfitData.map((i) => i.netProfit),
+                backgroundColor: 'rgba(54, 162, 235, 1)',  
             },
             {
-                label: 'tax',
-                type: 'bar', 
-                data: allTransactions.map((i) => i.netProfit),
-                backgroundColor: 'blue',
+                label: '일별 거래 금액',
+                type: 'bar',
+                data: totalDateData.map((i) => i.total),
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',  
             },
         ],
+        
     };
 
-    const options: any = { 
+    
+    const options: any = {
         scales: {
             x: {
                 stacked: true,
@@ -76,7 +99,9 @@ function Demo2() {
     };
 
     return (
-        <Bar data={data} options={options}></Bar>
+        <>
+         <Bar data={data} options={options} />
+        </>
     );
 }
 

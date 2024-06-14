@@ -13,7 +13,10 @@ export interface ITransaction {
     purchaseFee?: string;
     sellingFee?: string;
     purchaseTax?: string;
+    purchaseTotal?: string;
+    sellingTax?: string;
     sellingTotal?: string;
     standardFee?: string;
     baseTax?: string;
+    tradeTotal?: string;
 }

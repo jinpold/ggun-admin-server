@@ -1,10 +1,8 @@
 package com.james.api.transaction.service;
-
-import com.james.api.admin.model.Admin;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.james.api.common.component.Messenger;
 import com.james.api.transaction.model.Transaction;
 import com.james.api.transaction.model.TransactionDto;
-import com.james.api.transaction.repository.TransactionDaoImpl;
 import com.james.api.transaction.repository.TransactionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -64,5 +62,15 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public Map<String, Double> getNetProfitByDate() {
         return transactionRepository.getNetProfitByDate();
+    }
+
+    @Override
+    public Map<String, Double> getTotalByDate()  {
+        return transactionRepository.getTotalByDate();
+    }
+
+    @Override
+    public Map<String, Map<String, Integer>> getQuantityByDate() {
+        return transactionRepository.getQuantityByDate();
     }
 }

@@ -1,9 +1,12 @@
 package com.james.api.transaction.repository;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.james.api.transaction.model.QTransaction;
 import com.james.api.transaction.model.QTransactionDto;
 import com.james.api.transaction.model.TransactionDto;
+import com.querydsl.core.Tuple;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.core.types.dsl.NumberExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -11,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -51,7 +55,8 @@ public class TransactionDaoImpl implements TransactionDao {
                                 transaction.purchaseTotal,
                                 transaction.sellingTotal,
                                 transaction.standardFee,
-                                transaction.baseTax))
+                                transaction.baseTax,
+                                transaction.tradeTotal))
                 .from(transaction)
                 .fetch();
     }
@@ -78,6 +83,25 @@ public class TransactionDaoImpl implements TransactionDao {
     }
 
     @Override
+    public Map<String, Double> getTotalByDate() {
+        // tradeTotal을 Double로 변환
+        NumberExpression<Double> tradeTotalAsDouble = Expressions.numberTemplate(Double.class, "CAST({0} AS DOUBLE)", transaction.tradeTotal);
+
+        return jpaQueryFactory
+                .select(transaction.tradeDate, tradeTotalAsDouble.sum())
+                .from(transaction)
+                .groupBy(transaction.tradeDate)
+                .fetch()
+                .stream()
+                .collect(Collectors.toMap(
+                        tuple -> tuple.get(transaction.tradeDate).toString(),
+                        tuple -> tuple.get(tradeTotalAsDouble.sum()),
+                        (existing, replacement) -> existing + replacement
+                ));
+    }
+
+
+    @Override
     public Map<String, Double> getNetProfitByDate() {
         // netProfit을 Double로 변환
         NumberExpression<Double> netProfitAsDouble = Expressions.numberTemplate(Double.class, "CAST({0} AS DOUBLE)", transaction.netProfit);
@@ -99,6 +123,29 @@ public class TransactionDaoImpl implements TransactionDao {
     @Override
     public List<TransactionDto> getTransactionsByNetProfit() {
         return List.of();
+    }
+
+    @Override
+    public Map<String, Map<String, Integer>> getQuantityByDate() {
+        // String 값을 Integer로 변환하여 합산
+        NumberExpression<Integer> buyQuantityAsInteger = Expressions.numberTemplate(Integer.class, "CAST({0} AS INTEGER)", transaction.buyQuantity);
+        NumberExpression<Integer> sellQuantityAsInteger = Expressions.numberTemplate(Integer.class, "CAST({0} AS INTEGER)", transaction.sellQuantity);
+
+        return jpaQueryFactory
+                .select(transaction.tradeDate, buyQuantityAsInteger.sum(), sellQuantityAsInteger.sum())
+                .from(transaction)
+                .groupBy(transaction.tradeDate)
+                .fetch()
+                .stream()
+                .collect(Collectors.toMap(
+                        tuple -> tuple.get(transaction.tradeDate).toString(),
+                        tuple -> {
+                            Map<String, Integer> quantities = new HashMap<>();
+                            quantities.put("buyQuantity", tuple.get(buyQuantityAsInteger.sum()));
+                            quantities.put("sellQuantity", tuple.get(sellQuantityAsInteger.sum()));
+                            return quantities;
+                        }
+                ));
     }
 
 }

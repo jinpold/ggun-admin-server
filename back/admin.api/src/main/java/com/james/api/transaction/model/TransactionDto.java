@@ -32,6 +32,7 @@ public class TransactionDto {
     private String sellingTotal;
     private String standardFee;
     private String baseTax;
+    private String tradeTotal;
 
 
     @QueryProjection
@@ -41,7 +42,7 @@ public class TransactionDto {
                           String closingPrice, String netProfit, String purchaseFee,
                           String sellingFee, String purchaseTax, String sellingTax,
                           String purchaseTotal, String sellingTotal, String standardFee,
-                          String baseTax) {
+                          String baseTax, String tradeTotal) {
         this.id = id;
         this.username = username;
         this.buyStock = buyStock;
@@ -61,5 +62,6 @@ public class TransactionDto {
         this.sellingTotal = sellingTotal;
         this.standardFee = standardFee;
         this.baseTax = baseTax;
+        this.tradeTotal = tradeTotal;
     }
 }

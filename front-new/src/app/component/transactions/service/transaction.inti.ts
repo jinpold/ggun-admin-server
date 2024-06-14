@@ -18,5 +18,6 @@ export const initialState: ITransaction = {
     purchaseTax: "",
     sellingTotal: "",
     standardFee: "",
-    baseTax: ""
+    baseTax: "",
+    tradeTotal: ""
 }
