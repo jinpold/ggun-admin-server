@@ -23,7 +23,8 @@ export const linkButtonTitles = [
     {id: 4, title: '사용자 관리', path: `${PG.USER}/list`},
     {id: 5, title: '임직원 관리', path: `${PG.ADMIN}/list`},
     {id: 6, title: '거래 실적관리', path: `${PG.TRANSACTION}/list`},
-    {id: 7, title: '거래 실적차트', path: `${PG.TRANSACTION}/chart`}
+    {id: 7, title: '거래 실적차트', path: `${PG.TRANSACTION}/chart`},
+    {id: 8, title: '실시간 CHAT', path: `http://localhost:3000/pages/chats`},
 ];
 
 const theme = createTheme({

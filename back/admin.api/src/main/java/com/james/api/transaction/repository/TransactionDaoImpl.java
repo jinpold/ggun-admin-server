@@ -103,7 +103,7 @@ public class TransactionDaoImpl implements TransactionDao {
 
     @Override
     public Map<String, Double> getNetProfitByDate() {
-        // netProfit을 Double로 변환
+
         NumberExpression<Double> netProfitAsDouble = Expressions.numberTemplate(Double.class, "CAST({0} AS DOUBLE)", transaction.netProfit);
 
         return jpaQueryFactory
@@ -127,7 +127,7 @@ public class TransactionDaoImpl implements TransactionDao {
 
     @Override
     public Map<String, Map<String, Integer>> getQuantityByDate() {
-        // String 값을 Integer로 변환하여 합산
+
         NumberExpression<Integer> buyQuantityAsInteger = Expressions.numberTemplate(Integer.class, "CAST({0} AS INTEGER)", transaction.buyQuantity);
         NumberExpression<Integer> sellQuantityAsInteger = Expressions.numberTemplate(Integer.class, "CAST({0} AS INTEGER)", transaction.sellQuantity);
 
