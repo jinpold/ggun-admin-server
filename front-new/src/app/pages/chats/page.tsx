@@ -1,126 +1,161 @@
-'use client'
-import React, { useCallback, useRef, useState, useEffect, ChangeEvent, KeyboardEvent } from 'react';
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+'use client';
+import { useEffect, useState, useRef } from 'react';
+import axios from 'axios';
+import SockJS from 'sockjs-client';
+import { Client } from '@stomp/stompjs';
+import '@/app/styles/chat.css';
 
-interface ChatMessage {
-    name: string;
-    msg: string;
-    date: string;
+interface Message {
+  type: string;
+  sender: string;
+  message: string;
 }
 
-const Chat: React.FC = () => {
-    const [msg, setMsg] = useState<string>("");
-    const [name, setName] = useState<string>("");
-    const [chatt, setChatt] = useState<ChatMessage[]>([]);
-    const [chkLog, setChkLog] = useState<boolean>(false);
-    const [socketData, setSocketData] = useState<ChatMessage>();
+interface ChatRoom {
+  roomId: string;
+  name: string;
+}
 
-    const ws = useRef<WebSocket | null>(null); // WebSocket을 담는 변수, 컴포넌트가 변경될 때 객체가 유지되어야하므로 'ref'로 저장
+const Home = () => {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [inputValue, setInputValue] = useState('');
+  const [chatRooms, setChatRooms] = useState<ChatRoom[]>([]);
+  const [selectedRoom, setSelectedRoom] = useState<ChatRoom | null>(null);
+  const [username, setUsername] = useState(localStorage.getItem('wschat.sender') || '');
+  const stompClient = useRef<Client | null>(null);
 
-    const msgBox = chatt.map((item, idx) => (
-        <div key={idx} className={item.name === name ? 'me' : 'other'}>
-            <span><b>{item.name}</b></span> [ {item.date} ]<br/>
-            <span>{item.msg}</span>
-        </div>
-    ));
-
-    useEffect(() => {
-        if (socketData !== undefined) {
-            const tempData = chatt.concat(socketData);
-            console.log(tempData);
-            setChatt(tempData);
-        }
-    }, [socketData]);
-
-    const GlobalStyle = createGlobalStyle`  // css 초기화가 된 component
-        ${reset}
-    `;
-
-    const onText = (event: ChangeEvent<HTMLTextAreaElement>) => {
-        console.log(event.target.value);
-        setMsg(event.target.value);
+  useEffect(() => {
+    fetchChatRooms();
+    if (username) {
+      connectWebSocket();
     }
+    return () => disconnectWebSocket();
+  }, [username, selectedRoom]);
 
-    const webSocketLogin = useCallback(() => {
-        ws.current = new WebSocket("ws://localhost:8080/socket/chatt");
+  const fetchChatRooms = async () => {
+    try {
+      const response = await axios.get<ChatRoom[]>('http://localhost:8080/api/chat/rooms');
+      setChatRooms(response.data);
+    } catch (error) {
+      console.error('Failed to fetch chat rooms', error);
+    }
+  };
 
-        ws.current.onmessage = (message) => {
-            const dataSet: ChatMessage = JSON.parse(message.data);
-            setSocketData(dataSet);
+  const connectWebSocket = () => {
+    const socket = new SockJS('http://localhost:8080/ws-stomp');
+    stompClient.current = new Client({
+      webSocketFactory: () => socket,
+      debug: (str) => console.log(str),
+    });
+
+    stompClient.current.onConnect = () => {
+      if (selectedRoom) {
+        stompClient.current?.subscribe(`/sub/chat/room/${selectedRoom.roomId}`, (message) => {
+          const newMessage = JSON.parse(message.body) as Message;
+          setMessages((prevMessages) => [...prevMessages, newMessage]);
+        });
+
+        if (stompClient.current) {
+          stompClient.current.publish({
+            destination: '/pub/message',
+            body: JSON.stringify({
+              type: 'ENTER',
+              roomId: selectedRoom.roomId,
+              sender: username,
+            }),
+          });
         }
-    }, []);
-
-    const send = useCallback(() => {
-        if (!chkLog) {
-            if (name === "") {
-                alert("이름을 입력하세요.");
-                document.getElementById("name")?.focus();
-                return;
-            }
-            webSocketLogin();
-            setChkLog(true);
-        }
-
-        if (msg !== '') {
-            const data: ChatMessage = {
-                name,
-                msg,
-                date: new Date().toLocaleString(),
-            };  // 전송 데이터(JSON)
-
-            const temp = JSON.stringify(data);
-
-            if (ws.current?.readyState === 0) {   // readyState는 웹 소켓 연결 상태를 나타냄
-                ws.current.onopen = () => { // webSocket이 맺어지고 난 후, 실행
-                    console.log(ws.current?.readyState);
-                    ws.current?.send(temp);
-                }
-            } else {
-                ws.current?.send(temp);
-            }
-        } else {
-            alert("메세지를 입력하세요.");
-            document.getElementById("msg")?.focus();
-            return;
-        }
-        setMsg("");
-    }, [chkLog, msg, name, webSocketLogin]);
-
-    const handleKeyDown = (ev: KeyboardEvent<HTMLTextAreaElement>) => {
-        if (ev.key === 'Enter' && !ev.shiftKey) {
-            ev.preventDefault();
-            send();
-        }
+      }
     };
 
-    return (
+    stompClient.current.onStompError = (frame) => {
+      console.error('Broker reported error: ' + frame.headers['message']);
+      console.error('Additional details: ' + frame.body);
+    };
+
+    stompClient.current.activate();
+  };
+
+  const disconnectWebSocket = () => {
+    if (stompClient.current) {
+      stompClient.current.deactivate();
+    }
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(event.target.value);
+  };
+
+  const saveUsername = () => {
+    localStorage.setItem('wschat.sender', username);
+    connectWebSocket();
+  };
+
+  const sendMessage = () => {
+    if (stompClient.current && inputValue && selectedRoom) {
+      const body = {
+        type: 'TALK',
+        roomId: selectedRoom.roomId,
+        sender: username,
+        message: inputValue,
+      };
+      stompClient.current.publish({
+        destination: '/pub/message',
+        body: JSON.stringify(body),
+      });
+      setInputValue('');
+    }
+  };
+
+  const selectRoom = (room: ChatRoom) => {
+    setSelectedRoom(room);
+    setMessages([]);
+  };
+
+  return (
+    <div className="container">
+      {!username && (
+        <div>
+          <h2>대화명을 입력하세요</h2>
+          <input type="text" value={username} onChange={handleUsernameChange} />
+          <button onClick={saveUsername}>저장</button>
+        </div>
+      )}
+      {username && (
         <>
-            <GlobalStyle />
-            <div id="chat-wrap">
-                <div id='chatt'>
-                    <h1 id="title">WebSocket Chatting</h1>
-                    <br />
-                    <div id='talk'>
-                        <div className='talk-shadow'></div>
-                        {msgBox}
-                    </div>
-                    <input disabled={chkLog}
-                        placeholder='이름을 입력하세요.'
-                        type='text'
-                        id='name'
-                        value={name}
-                        onChange={(event => setName(event.target.value))} />
-                    <div id='sendZone'>
-                        <textarea id='msg' value={msg} onChange={onText}
-                            onKeyDown={handleKeyDown}></textarea>
-                        <input type='button' value='전송' id='btnSend' onClick={send} />
-                    </div>
-                </div>
-            </div>
+          <h1>채팅방</h1>
+          <div>
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              placeholder="메시지를 입력하세요"
+            />
+            <button onClick={sendMessage}>보내기</button>
+          </div>
+          <ul>
+            {messages.map((msg, index) => (
+              <li key={index} className="message">
+                {msg.sender}: {msg.message}
+              </li>
+            ))}
+          </ul>
+          <h2>채팅방 목록</h2>
+          <ul>
+            {chatRooms.map((room) => (
+              <li key={room.roomId} className="chatRoom" onClick={() => selectRoom(room)}>
+                {room.name}
+              </li>
+            ))}
+          </ul>
         </>
-    );
+      )}
+    </div>
+  );
 };
 
-export default Chat;
-
+export default Home;

@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
                 .build();
     }
 
-    // MBTI에 따른 투자 성향을 반환하는 메서드
+    // 컬러에 따른 투자 성향을 반환하는 메서드
     private String getInvestmentPropensityByColor(String color) {
         switch (color) {
             case "RED":

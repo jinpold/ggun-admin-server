@@ -19,7 +19,9 @@
     "@mui/x-data-grid": "7.0.0",
     "@prisma/client": "^5.14.0",
     "@reduxjs/toolkit": "2.2.2",
+    "@stomp/stompjs": "^7.0.0",
     "@types/redux-actions": "2.6.5",
+    "@types/sockjs-client": "^1.5.4",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.3",
@@ -36,6 +38,7 @@
     "react-hook-form": "7.51.3",
     "redux-actions": "3.0.0",
     "redux-persist": "^6.0.0",
+    "sockjs-client": "^1.6.1",
     "styled-components": "^6.1.11",
     "styled-reset": "^4.5.2"
   },

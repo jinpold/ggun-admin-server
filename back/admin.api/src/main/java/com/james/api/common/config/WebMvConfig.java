@@ -20,7 +20,7 @@ public class WebMvConfig implements WebMvcConfigurer {
 //                .addPathPatterns("/api/**")
                 .excludePathPatterns("/api/UserAuth/**", "/api/auth/**", "/api/news/**", "/api/articles/**",
                         "/api/boards/**", "/api/users/**", "/chat/**", "/ws-stomp/**", "/**", "api/**", "/chat/room/**",
-                        "/api/admins/**", "/api/transactions/**");
+                        "/api/admins/**", "/api/transactions/**", "/api/email/**");
     }
 
 }

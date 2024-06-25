@@ -1,19 +1,14 @@
 package com.james.api.transaction.repository;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.james.api.transaction.model.QTransaction;
 import com.james.api.transaction.model.QTransactionDto;
 import com.james.api.transaction.model.TransactionDto;
-import com.querydsl.core.Tuple;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.core.types.dsl.NumberExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-
-import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -117,12 +112,6 @@ public class TransactionDaoImpl implements TransactionDao {
                         tuple -> tuple.get(netProfitAsDouble.sum()),
                         (existing, replacement) -> existing + replacement // 중복 키가 발생했을 때 합계 처리
                 ));
-    }
-
-
-    @Override
-    public List<TransactionDto> getTransactionsByNetProfit() {
-        return List.of();
     }
 
     @Override
